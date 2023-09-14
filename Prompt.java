@@ -18,7 +18,7 @@ import java.io.IOException;
 public class Prompt
 {
 	// BufferedReader variables
-	private static InputStremReader streamReader = new InputStreamReader(System.in);
+	private static InputStreamReader streamReader = new InputStreamReader(System.in);
 	private static BufferedReader buffReader = new BufferedReader(streamReader);
 
 	/**
@@ -37,6 +37,7 @@ public class Prompt
 			System.err.println("ERROR: BufferedReader could not read line.");
 		return input;
 	}
+}
 	
 	/**
 	 *	Prompts the user for a character and returns the character.
@@ -46,15 +47,15 @@ public class Prompt
 	public static char getChar (String ask)
 	{
 		System.out.print(ask + " --> ");
-		char input = "";
+		char input = Character.MIN_VALUE;
 		try{
-			input = buffReader.readLine();
+			input = buffReader.readChar[];
 		}
 		catch (IOException e) {
 			System.err.println("ERROR: BufferedReader could not read line.");
 		return input;
-		return input;
 	}
+}
 	
 	/**
 	 *	Prompts the user for an integer and returns the integer.
